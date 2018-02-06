@@ -1,10 +1,7 @@
 #pragma once
 
-#include "FreeImage\include\FreeImage.h"
 #include <string>
-//#include <GL\glew.h>
-#include "GLEW\include\GL\glew.h"
-#include "imageload.h"
+#include <glew.h>
 
 
 namespace Engine { namespace Graphics {

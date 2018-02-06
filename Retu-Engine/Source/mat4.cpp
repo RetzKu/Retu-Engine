@@ -1,4 +1,4 @@
-#include "../include/mat4.h"
+#include "mat4.h"
 
 namespace Engine { namespace Maths {
 		

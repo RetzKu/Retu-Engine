@@ -3,7 +3,6 @@
 #include <string>
 #include <fstream>
 #include <iostream>
-#include <stb_image.h>
 #include "timer.h"
 
 namespace Engine {

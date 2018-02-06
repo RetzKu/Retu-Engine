@@ -1,5 +1,5 @@
 //#include "Shader.h"
-#include "../MyEngine/include/Shader.h"
+#include <Shader.h>
 
 namespace Engine { namespace Graphics {
 

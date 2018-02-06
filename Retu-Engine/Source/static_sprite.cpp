@@ -1,4 +1,4 @@
-#include "../include/static_sprite.h"
+#include "static_sprite.h"
 
 namespace Engine { namespace Graphics {
 

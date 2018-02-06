@@ -1,6 +1,6 @@
 #pragma once
 
-#include "GLEW\include\GL\glew.h"
+#include <glew.h>
 
 namespace Engine { namespace Graphics {
 

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "fileutils.h"
-#include <GL\glew.h>
+#include <glew.h>
 #include <vector>
 #include <iostream>
 #include "Maths.h"

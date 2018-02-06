@@ -1,7 +1,6 @@
 #include <cassert>
 //#include <BatchRenderer2D.h>
-#include "../MyEngine/include/BatchRenderer2D.h"
-#include "FreeType\freetype-gl\freetype-gl.h"
+#include "BatchRenderer2D.h"
 
 // T‰ss‰ filussa oleviin kommentteihin ‰lk‰‰ kajotko voi k‰ytt‰‰ myˆhemmin hyv‰ks et kattoo jos on PC nii k‰ytt‰‰ sit VAO:ta
 
