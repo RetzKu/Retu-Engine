@@ -13,12 +13,11 @@
 /*  this file you indicate that you have read the license and              */
 /*  understand and accept it fully.                                        */
 /*                                                                         */
-/***************************************************************************/
-
+/***************************************************************************/ 
 #ifndef __FT_HEADER_H__
 #define __FT_HEADER_H__
-
-
+#define FT2_BUILD_LIBRARY 1
+#define _CRT_SECURE_NO_WARNINGS 1
   /*@***********************************************************************/
   /*                                                                       */
   /* <Macro>                                                               */

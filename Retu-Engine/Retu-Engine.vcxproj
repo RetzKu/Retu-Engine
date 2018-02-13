@@ -11,10 +11,53 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\BackupMain.cpp" />
+    <ClCompile Include="Source\BatchRenderer2D.cpp" />
+    <ClCompile Include="Source\buffer.cpp" />
+    <ClCompile Include="Source\FileUtils.cpp" />
+    <ClCompile Include="Source\group.cpp" />
+    <ClCompile Include="Source\indexbuffer.cpp" />
+    <ClCompile Include="Source\Label.cpp" />
+    <ClCompile Include="Source\layer.cpp" />
     <ClCompile Include="Source\Main.cpp" />
+    <ClCompile Include="Source\mat4.cpp" />
+    <ClCompile Include="Source\Shader.cpp" />
+    <ClCompile Include="Source\simple2drenderer.cpp" />
+    <ClCompile Include="Source\sprite.cpp" />
+    <ClCompile Include="Source\static_sprite.cpp" />
+    <ClCompile Include="Source\texture.cpp" />
+    <ClCompile Include="Source\tilelayer.cpp" />
+    <ClCompile Include="Source\vec2.cpp" />
+    <ClCompile Include="Source\vec3.cpp" />
+    <ClCompile Include="Source\vec4.cpp" />
+    <ClCompile Include="Source\vertexarray.cpp" />
     <ClCompile Include="Source\window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Headers\BatchRenderer2D.h" />
+    <ClInclude Include="Headers\buffer.h" />
+    <ClInclude Include="Headers\fileutils.h" />
+    <ClInclude Include="Headers\group.h" />
+    <ClInclude Include="Headers\imageload.h" />
+    <ClInclude Include="Headers\indexbuffer.h" />
+    <ClInclude Include="Headers\Label.h" />
+    <ClInclude Include="Headers\layer.h" />
+    <ClInclude Include="Headers\mat4.h" />
+    <ClInclude Include="Headers\Maths.h" />
+    <ClInclude Include="Headers\MikaTestijuttuja.h" />
+    <ClInclude Include="Headers\renderable2d.h" />
+    <ClInclude Include="Headers\renderer2d.h" />
+    <ClInclude Include="Headers\Shader.h" />
+    <ClInclude Include="Headers\simple2drenderer.h" />
+    <ClInclude Include="Headers\sprite.h" />
+    <ClInclude Include="Headers\static_sprite.h" />
+    <ClInclude Include="Headers\texture.h" />
+    <ClInclude Include="Headers\tilelayer.h" />
+    <ClInclude Include="Headers\timer.h" />
+    <ClInclude Include="Headers\vec2.h" />
+    <ClInclude Include="Headers\vec3.h" />
+    <ClInclude Include="Headers\vec4.h" />
+    <ClInclude Include="Headers\vertexarray.h" />
     <ClInclude Include="Headers\window.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -52,13 +95,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)\Output\</OutDir>
     <IntDir>$(SolutionDir)\Output\</IntDir>
-    <IncludePath>$(SolutionDir)\deps\FreeType\include;$(SolutionDir)\deps\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\deps\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)\deps\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)\Output\</OutDir>
     <IntDir>$(SolutionDir)\Output\</IntDir>
-    <IncludePath>$(SolutionDir)\deps\FreeType\include;$(SolutionDir)\deps\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\deps\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)\deps\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -66,10 +109,10 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)\Headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Modules\FreeType\;$(ProjectDir)\Headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>glfw3.lib;glew32.lib;glew32s.lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;glew32.lib;glew32s.lib;OpenGL32.lib;FreeType.lib;FreeImage.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -79,12 +122,12 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)\Headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Modules\FreeType\;$(ProjectDir)\Headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>glfw3.lib;glew32.lib;glew32s.lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;glew32.lib;glew32s.lib;OpenGL32.lib;FreeType.lib;FreeImage.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

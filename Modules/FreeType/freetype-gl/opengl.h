@@ -43,7 +43,7 @@
 #    include <OpenGL/gl.h>
 #  endif
 #elif defined(SP_PLATFORM_WINDOWS) || defined(_WIN64)
-#include <GL/glew.h>
+#include <glew.h>
 #else
 //#  include <GL/glew.h>
 //#  include <GL/gl.h>

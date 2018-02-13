@@ -1,9 +1,9 @@
-#pragma once
-
+#pragma once 
 #include <string>
 #include <fstream>
 #include <iostream>
 #include "timer.h"
+#include <stb_image.h>
 
 namespace Engine {
 
@@ -14,7 +14,7 @@ namespace Engine {
 	public:
 		static std::string read_file(const char* filepath);
 		static unsigned char* LoadTextureFromFile(const std::string Filename);
-		//int CoutFPS();
+		int CoutFPS();
 	private:
 		Timer time;
 		float timer = 0.0f;

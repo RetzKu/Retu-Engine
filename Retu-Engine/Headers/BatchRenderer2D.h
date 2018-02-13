@@ -4,6 +4,8 @@
 #include "renderer2d.h"
 #include "renderable2d.h"
 #include "indexbuffer.h"
+#include "freetype-gl\texture-atlas.h"
+#include "freetype-gl\texture-font.h"
 
 
 namespace ftgl {

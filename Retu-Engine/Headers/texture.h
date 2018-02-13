@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include <glew.h>
+#include "imageload.h"
 
 
 namespace Engine { namespace Graphics {
