@@ -2,7 +2,7 @@
 
 
 #include <string>
-#include <FreeImage.h>
+//#include <FreeImage.h>
 #include <glew.h>
 
 namespace Engine {

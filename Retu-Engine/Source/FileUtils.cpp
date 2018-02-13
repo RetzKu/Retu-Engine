@@ -1,7 +1,5 @@
-#define STB_IMAGE_IMPLEMENTATION
 #include "fileutils.h"
 
-#define _CRT_SECURE_NO_WARNINGS_ 1
 using namespace Engine;
 
 std::string FileUtils::read_file(const char* filepath)
