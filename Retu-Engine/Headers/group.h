@@ -4,19 +4,18 @@
 #include "renderable2d.h"
 
 
-namespace Engine { namespace Graphics {
+namespace Engine { 
 	
-
-	class Group : public Renderable2D
+	 class Group : public Renderable2D
 	{
 	private:
 		std::vector<Renderable2D*> _renderables;
-		Maths::mat4 _transformationMatrix;
+		mat4 _transformationMatrix;
 	public:
-		Group(const Maths::mat4& tranform);
+		Group(const mat4& tranform);
 		~Group();
 		void add(Renderable2D* renderable);
 		void submit(Renderer2D* renderer) const override;
 	};
 	
-}}
+}

@@ -2,7 +2,7 @@
 
 #include <glew.h>
 
-namespace Engine { namespace Graphics {
+namespace Engine { 
 
 		class IndexBuffer
 		{
@@ -21,4 +21,4 @@ namespace Engine { namespace Graphics {
 		};
 
 
-}}
+}

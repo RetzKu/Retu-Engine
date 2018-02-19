@@ -1,7 +1,7 @@
 #include "vertexarray.h"
 
 
-namespace Engine { namespace Graphics {
+namespace Engine { 
 	
 	VertexArray::VertexArray()
 	{
@@ -43,4 +43,4 @@ namespace Engine { namespace Graphics {
 		glBindVertexArray(0);
 	}
 
-}}
+}

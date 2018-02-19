@@ -1,45 +1,45 @@
 #include "layer.h"
 
 
-namespace Engine { namespace Graphics {
+namespace Engine { 
 
-	Layer::Layer(Renderer2D* renderer, Shader* shader, Maths::mat4 projectionMatrix)
+Layer::Layer(Renderer2D* renderer, Shader* shader, mat4 projectionMatrix)
+{
+	_renderer = renderer;
+	_shader = shader;
+	_projectionMatrix = projectionMatrix;
+
+	_shader->enable();
+	_shader->setUniformMat4("pr_matrix", _projectionMatrix);
+	_shader->disable();
+}
+
+Layer::~Layer()
+{
+	delete _shader;
+	delete _renderer;
+
+	for(int i = 0; i < _renderables.size(); i++)
 	{
-		_renderer = renderer;
-		_shader = shader;
-		_projectionMatrix = projectionMatrix;
+		delete _renderables[i];
+	}
+}
 
-		_shader->enable();
-		_shader->setUniformMat4("pr_matrix", _projectionMatrix);
-		_shader->disable();
+void Layer::add(Renderable2D* renderable)
+{
+	_renderables.push_back(renderable);
+}
+
+void Layer::render()
+{
+	_shader->enable();
+	_renderer->begin();
+	for(const Renderable2D* renderable : _renderables)
+	{
+		renderable->submit(_renderer);
 	}
 
-	Layer::~Layer()
-	{
-		delete _shader;
-		delete _renderer;
-
-		for(int i = 0; i < _renderables.size(); i++)
-		{
-			delete _renderables[i];
-		}
-	}
-
-	void Layer::add(Renderable2D* renderable)
-	{
-		_renderables.push_back(renderable);
-	}
-
-	void Layer::render()
-	{
-		_shader->enable();
-		_renderer->begin();
-		for(const Renderable2D* renderable : _renderables)
-		{
-			renderable->submit(_renderer);
-		}
-
-		_renderer->end();
-		_renderer->flush();
-	}
-}}
+	_renderer->end();
+	_renderer->flush();
+}
+}

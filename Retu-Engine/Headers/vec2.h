@@ -1,8 +1,7 @@
 #pragma once
 #include <iostream>
-namespace Engine {
-	namespace Maths {
-
+namespace Engine 
+{
 		struct vec2 
 		{
 			float x, y;
@@ -32,5 +31,4 @@ namespace Engine {
 
 			friend std::ostream& operator<<(std::ostream& stream, const vec2& vector);
 		};
-	}
 }

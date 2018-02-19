@@ -1,5 +1,5 @@
+#define STB_IMAGE_IMPLEMENTATION
 #include "fileutils.h"
-
 using namespace Engine;
 
 std::string FileUtils::read_file(const char* filepath)

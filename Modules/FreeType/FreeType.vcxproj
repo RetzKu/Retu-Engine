@@ -44,12 +44,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>$(SolutionDir)\deps\include;$(ProjectDir)\include;$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)\Output\</OutDir>
-    <IntDir>$(SolutionDir)\Output\</IntDir>
+    <IntDir>$(SolutionDir)\Intermediate\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>$(SolutionDir)\deps\include;$(ProjectDir)\include;$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)\Output\</OutDir>
-    <IntDir>$(SolutionDir)\Output\</IntDir>
+    <IntDir>$(SolutionDir)\Intermediate\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>

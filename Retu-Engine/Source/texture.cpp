@@ -1,6 +1,6 @@
 #include "texture.h"
 
-namespace Engine { namespace Graphics {
+namespace Engine { 
 
 	Texture::Texture(const std::string& filename)
 		: _filename(filename)
@@ -40,4 +40,4 @@ namespace Engine { namespace Graphics {
 		glBindTexture(GL_TEXTURE_2D, 0);
 	}
 
-}}
+}

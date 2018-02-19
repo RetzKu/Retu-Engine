@@ -1,7 +1,6 @@
-//#include "Shader.h"
 #include <Shader.h>
 
-namespace Engine { namespace Graphics {
+namespace Engine { 
 
 	Shader::Shader(const char* vertPath, const char* fragPath)
 	{
@@ -90,18 +89,18 @@ namespace Engine { namespace Graphics {
 		glUniform1iv(getUniformLocation(name), count, value);
 	}
 
-	void Shader::setUniformMat2f(const GLchar* name, const Maths::vec2& vector)
+	void Shader::setUniformMat2f(const GLchar* name, const vec2& vector)
 	{
 		glUniform2f(getUniformLocation(name), vector.x, vector.y);
 	}
 
-	void Shader::setUniformMat3f(const GLchar* name, const Maths::vec3& vector)
+	void Shader::setUniformMat3f(const GLchar* name, const vec3& vector)
 	{
 		glUniform3f(getUniformLocation(name), vector.x, vector.y, vector.z);
 
 	}
 
-	void Shader::setUniformMat4f(const GLchar* name, const Maths::vec4& vector)
+	void Shader::setUniformMat4f(const GLchar* name, const vec4& vector)
 	{
 		glUniform4f(getUniformLocation(name), vector.x, vector.y, vector.z, vector.w);
 	}
@@ -111,7 +110,7 @@ namespace Engine { namespace Graphics {
 		glUniform1i(getUniformLocation(name), value);
 	}
 
-	void Shader::setUniformMat4(const GLchar* name, const Maths::mat4& matrix)
+	void Shader::setUniformMat4(const GLchar* name, const mat4& matrix)
 	{
 		glUniformMatrix4fv(getUniformLocation(name), 1, GL_FALSE, matrix.elements);
 	}
@@ -126,4 +125,4 @@ namespace Engine { namespace Graphics {
 		glUseProgram(0);
 	}
 
-}}
+}

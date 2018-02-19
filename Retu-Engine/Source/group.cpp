@@ -1,10 +1,10 @@
 #include "group.h"
 
 
-namespace Engine { namespace Graphics {
+namespace Engine { 
 
 
-	Group::Group(const Maths::mat4& transform)
+	Group::Group(const mat4& transform)
 		: _transformationMatrix(transform)
 	{		
 	}
@@ -31,4 +31,4 @@ namespace Engine { namespace Graphics {
 		}
 		renderer->pop();
 	}
-}}
+}

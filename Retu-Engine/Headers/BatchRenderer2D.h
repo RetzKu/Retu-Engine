@@ -13,7 +13,7 @@ namespace ftgl {
 	struct texture_font_t;
 }
 
-namespace Engine { namespace Graphics {
+namespace Engine { 
 
 #define RENDERER_MAX_SPRITES	60000
 #define RENDERER_VERTEX_SIZE	sizeof(VertexData)
@@ -43,11 +43,11 @@ namespace Engine { namespace Graphics {
 		~BatchRenderer2D();
 		void begin() override;
 		void submit(const Renderable2D* renderable);
-		void drawString(const std::string& text,const Maths::vec3& position,const Maths::vec4& color) override;
+		void drawString(const std::string& text,const vec3& position,const vec4& color) override;
 		void end() override;
 		void flush();
 	private:
 		void init();
 	};
 
-}}
+}

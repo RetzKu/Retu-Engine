@@ -1,7 +1,7 @@
 #include <buffer.h>
 
 
-namespace Engine { namespace Graphics {
+namespace Engine {
 
 	Buffer::Buffer(GLfloat* data, GLsizei count, GLuint componentCount)
 	{
@@ -28,4 +28,4 @@ namespace Engine { namespace Graphics {
 	{
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 	}
-}}
+}

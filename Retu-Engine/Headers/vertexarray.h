@@ -4,7 +4,7 @@
 #include <glew.h>
 #include "buffer.h"
 
-namespace Engine { namespace Graphics {
+namespace Engine {
 
 	class VertexArray
 	{
@@ -19,6 +19,4 @@ namespace Engine { namespace Graphics {
 		void bind() const;
 		void unbind() const;
 	};
-
-
-}}
+}

@@ -3,7 +3,7 @@
 
 // Tässä filussa oleviin kommentteihin älkää kajotko voi käyttää myöhemmin hyväks et kattoo jos on PC nii käyttää sit VAO:ta
 
-namespace Engine { namespace Graphics {
+namespace Engine { 
 
 	BatchRenderer2D::BatchRenderer2D()
 	{
@@ -68,10 +68,10 @@ namespace Engine { namespace Graphics {
 
 	void BatchRenderer2D::submit(const Renderable2D* renderable)
 	{
-		const Maths::vec3& position = renderable->getPosition();
-		const Maths::vec2& size = renderable->getSize();
-		const Maths::vec4& color = renderable->getColor();
-		const std::vector<Maths::vec2>& uv = renderable->getUV();
+		const vec3& position = renderable->getPosition();
+		const vec2& size = renderable->getSize();
+		const vec4& color = renderable->getColor();
+		const std::vector<vec2>& uv = renderable->getUV();
 		const GLuint tid = renderable->getTID();
 
 		unsigned int c = 0;
@@ -131,19 +131,19 @@ namespace Engine { namespace Graphics {
 		_buffer->color = c;
 		_buffer++;	
 
-		_buffer->vertex = *_transformationBack * Maths::vec3(position.x, position.y + size.y, position.z);
+		_buffer->vertex = *_transformationBack * vec3(position.x, position.y + size.y, position.z);
 		_buffer->uv = uv[1];
 		_buffer->tid = ts;
 		_buffer->color = c;
 		_buffer++;
 
-		_buffer->vertex = *_transformationBack * Maths::vec3(position.x + size.x, position.y + size.y, position.z);
+		_buffer->vertex = *_transformationBack * vec3(position.x + size.x, position.y + size.y, position.z);
 		_buffer->uv = uv[2];
 		_buffer->tid = ts;
 		_buffer->color = c;
 		_buffer++;
 
-		_buffer->vertex = *_transformationBack * Maths::vec3(position.x + size.x, position.y, position.z);
+		_buffer->vertex = *_transformationBack * vec3(position.x + size.x, position.y, position.z);
 		_buffer->uv = uv[3];
 		_buffer->tid = ts;
 		_buffer->color = c;
@@ -152,7 +152,7 @@ namespace Engine { namespace Graphics {
 		_indexCount += 6;
 	}
 
-	void BatchRenderer2D::drawString(const std::string& text,const Maths::vec3& position,const Maths::vec4& color)
+	void BatchRenderer2D::drawString(const std::string& text,const vec3& position,const vec4& color)
 	{
 		using namespace ftgl;
 
@@ -213,26 +213,26 @@ namespace Engine { namespace Graphics {
 				float u1 = glyph->s1;
 				float v1 = glyph->t1;
 
-				_buffer->vertex = *_transformationBack* Maths::vec3(x0, y0, 0);
-				_buffer->uv = Maths::vec2(u0, v0);
+				_buffer->vertex = *_transformationBack* vec3(x0, y0, 0);
+				_buffer->uv = vec2(u0, v0);
 				_buffer->tid = ts;
 				_buffer->color = unsintcolor;
 				_buffer++;
 				
-				_buffer->vertex = *_transformationBack* Maths::vec3(x0, y1, 0);
-				_buffer->uv = Maths::vec2(u0, v1);
+				_buffer->vertex = *_transformationBack* vec3(x0, y1, 0);
+				_buffer->uv = vec2(u0, v1);
 				_buffer->tid = ts;
 				_buffer->color = unsintcolor;;
 				_buffer++;
 
-				_buffer->vertex = *_transformationBack* Maths::vec3(x1, y1, 0);
-				_buffer->uv = Maths::vec2(u1, v1);
+				_buffer->vertex = *_transformationBack* vec3(x1, y1, 0);
+				_buffer->uv = vec2(u1, v1);
 				_buffer->tid = ts;
 				_buffer->color = unsintcolor;
 				_buffer++;
 
-				_buffer->vertex = *_transformationBack* Maths::vec3(x1, y0, 0);
-				_buffer->uv = Maths::vec2(u1, v0);
+				_buffer->vertex = *_transformationBack* vec3(x1, y0, 0);
+				_buffer->uv = vec2(u1, v0);
 				_buffer->tid = ts;
 				_buffer->color = unsintcolor;
 				_buffer++;
@@ -292,6 +292,4 @@ namespace Engine { namespace Graphics {
 
 		_indexCount = 0;
 	}
-	
-
-}}
+}

@@ -2,7 +2,7 @@
 
 #include <glew.h>
 
-namespace Engine { namespace Graphics {
+namespace Engine { 
 
 		class Buffer
 		{
@@ -18,4 +18,4 @@ namespace Engine { namespace Graphics {
 
 			inline GLuint getComponentCount() const { return _componentCount; }
 		};
-} }
+} 

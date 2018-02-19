@@ -4,7 +4,7 @@
 #include "imageload.h"
 
 
-namespace Engine { namespace Graphics {
+namespace Engine { 
 
 	class Texture
 	{
@@ -27,4 +27,4 @@ namespace Engine { namespace Graphics {
 
 	};
 
-}}
+}

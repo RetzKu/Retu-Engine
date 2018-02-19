@@ -1,9 +1,9 @@
 #include "static_sprite.h"
 
-namespace Engine { namespace Graphics {
+namespace Engine { 
 
-	StaticSprite::StaticSprite(float x, float y, float width, float height, const Maths::vec4& color, Shader& shader)
-		: Renderable2D(Maths::vec3(x, y, 0), Maths::vec2(width, height), color), _shader(shader)
+	StaticSprite::StaticSprite(float x, float y, float width, float height, const vec4& color, Shader& shader)
+		: Renderable2D(vec3(x, y, 0), vec2(width, height), color), _shader(shader)
 		{
 			_vertexArray = new VertexArray();
 
@@ -38,4 +38,4 @@ namespace Engine { namespace Graphics {
 			delete _indexBuffer;
 		}
 
-}}
+}

@@ -3,14 +3,12 @@
 #include "layer.h"
 #include "BatchRenderer2D.h"
 
-namespace Engine {
-	namespace Graphics {
-	
+namespace Engine
+{
 	class TileLayer : public Layer
 	{
 	public:
 		TileLayer(Shader* shader);
 		~TileLayer();
 	};
-	
-}}
+}

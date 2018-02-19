@@ -6,7 +6,7 @@
 #include <fstream>
 #include <iostream>
 #include "timer.h"
-#include <stb_image.h>
+#include "stb_image.h"
 
 namespace Engine {
 
