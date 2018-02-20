@@ -36,6 +36,7 @@ int FileUtils::CoutFPS()
 		frames = 0;
 		return tmp;
 	}
+	return 0;
 }
 
 unsigned char* FileUtils::LoadTextureFromFile(const std::string FileName)

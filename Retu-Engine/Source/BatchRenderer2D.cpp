@@ -118,10 +118,10 @@ namespace Engine {
 			}
 		}
 
-		int r = color.x * 255.0f;
-		int g = color.y * 255.0f;
-		int b = color.z * 255.0f;
-		int a = color.w * 255.0f;			
+		int r = (int)color.x * 255;
+		int g = (int)color.y * 255;
+		int b = (int)color.z * 255;
+		int a = (int)color.w * 255;			
 
 		c = a << 24 | b << 16 | g << 8 | r;
 		
@@ -156,10 +156,10 @@ namespace Engine {
 	{
 		using namespace ftgl;
 
-		int r = color.x * 255.0f;
-		int g = color.y * 255.0f;
-		int b = color.z * 255.0f;
-		int a = color.w * 255.0f;
+		int r = (int)color.x * 255;
+		int g = (int)color.y * 255;
+		int b = (int)color.z * 255;
+		int a = (int)color.w * 255;
 
 		unsigned int unsintcolor = a << 24 | b << 16 | g << 8 | r;
 
@@ -247,7 +247,7 @@ namespace Engine {
 	
 	void BatchRenderer2D::end()
 	{
-		int currentSize = (_buffer - _bufferStart) * RENDERER_SPRITE_SIZE;
+		auto currentSize = (_buffer - _bufferStart) * RENDERER_SPRITE_SIZE;
 
 		assert(currentSize < RENDERER_MAX_SPRITES * RENDERER_SPRITE_SIZE); // Note(Eetu): ei voida rendata noin montaa nosta Renderer max sizea
 		glBufferSubData(GL_ARRAY_BUFFER, 0, currentSize, _bufferStart);

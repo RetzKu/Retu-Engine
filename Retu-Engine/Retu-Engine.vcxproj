@@ -94,13 +94,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)\Output\</OutDir>
-    <IntDir>$(SolutionDir)\Intermediate\</IntDir>
+    <IntDir>$(SolutionDir)\Intermediate\Engine</IntDir>
     <IncludePath>$(SolutionDir)\deps\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)\deps\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)\Output\</OutDir>
-    <IntDir>$(SolutionDir)\Intermediate\</IntDir>
+    <IntDir>$(SolutionDir)\Intermediate\Engine</IntDir>
     <IncludePath>$(SolutionDir)\deps\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)\deps\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>

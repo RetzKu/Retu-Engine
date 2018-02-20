@@ -1,6 +1,5 @@
-#include <glfw3.h>
-#define __glew_h__
 #include <glew.h>
+#include <glfw3.h>
 #include "window.h" //for Window class
 #include <Windows.h> //Windows32 header for getasync
 
