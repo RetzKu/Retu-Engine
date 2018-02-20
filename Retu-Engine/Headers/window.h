@@ -1,6 +1,6 @@
-#include <iostream>
 #include <glew.h>
 #include <glfw3.h>
+#include <iostream>
 
 namespace Engine 
 {

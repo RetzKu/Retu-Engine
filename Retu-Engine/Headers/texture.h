@@ -1,9 +1,3 @@
-#pragma once
-
-#include <string>
-#include "imageload.h"
-
-
 namespace Engine { 
 
 	class Texture

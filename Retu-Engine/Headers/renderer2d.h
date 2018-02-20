@@ -1,13 +1,5 @@
-#pragma once
-
-#include <vector>
-#include <glew.h>
-#include "Maths.h"
-
-
 namespace Engine { 
 
-	class Renderable2D;
 
 	class Renderer2D
 	{
@@ -30,7 +22,6 @@ namespace Engine {
 			{
 				_transformationStack.push_back(matrix);
 			}
-			// Default: kerrotaan .bäckillä()
 			else
 			{
 				_transformationStack.push_back(_transformationStack.back() * matrix);

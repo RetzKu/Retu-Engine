@@ -1,11 +1,3 @@
-#pragma once
-
-#include <glew.h>
-#include "fileutils.h"
-#include <vector>
-#include <iostream>
-#include "Maths.h"
-
 namespace Engine {
 
 	class Shader

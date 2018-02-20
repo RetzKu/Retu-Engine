@@ -1,12 +1,3 @@
-#pragma once
-
-#include "Maths.h"
-#include "indexbuffer.h"
-#include "vertexarray.h"
-#include "renderer2d.h"
-#include "Shader.h"
-#include "texture.h"
-
 namespace Engine
 	{
 		// Kama mitä nakataan shadereille

@@ -1,9 +1,3 @@
-#pragma once
-
-#include <vector>
-#include <glew.h>
-#include "buffer.h"
-
 namespace Engine {
 
 	class VertexArray

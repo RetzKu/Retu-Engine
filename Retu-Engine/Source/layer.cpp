@@ -3,11 +3,11 @@
 
 namespace Engine { 
 
-Layer::Layer(Renderer2D* renderer, Shader* shader, mat4 projectionMatrix)
+Layer::Layer(Shader* shader)
 {
-	_renderer = renderer;
+	_renderer = new BatchRenderer2D();
 	_shader = shader;
-	_projectionMatrix = projectionMatrix;
+	_projectionMatrix = mat4::orthographic(-16.0f, 16.0f, -9.0f, 9.0f, -1.0f, 1.0f);
 
 	_shader->enable();
 	_shader->setUniformMat4("pr_matrix", _projectionMatrix);
@@ -16,8 +16,8 @@ Layer::Layer(Renderer2D* renderer, Shader* shader, mat4 projectionMatrix)
 
 Layer::~Layer()
 {
-	delete _shader;
 	delete _renderer;
+	delete _shader;
 
 	for(int i = 0; i < _renderables.size(); i++)
 	{

@@ -1,9 +1,3 @@
-#pragma once
-
-#include <deque>
-#include "static_sprite.h"
-#include "renderer2d.h"
-
 namespace Engine { 
 
 	class Simple2DRenderer : public Renderer2D

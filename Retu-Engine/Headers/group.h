@@ -1,9 +1,3 @@
-#pragma once
-
-
-#include "renderable2d.h"
-
-
 namespace Engine { 
 	
 	 class Group : public Renderable2D

@@ -1,7 +1,3 @@
-#pragma once
-
-#include "renderable2d.h"
-
 namespace Engine {
 
 	class StaticSprite : public Renderable2D
